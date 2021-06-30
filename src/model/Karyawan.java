@@ -97,10 +97,10 @@ public class Karyawan {
                 koneksi.statement = (Statement) koneksi.koneksi.createStatement();
                 koneksi.statement.executeUpdate(query); //execute querynya
                 System.out.println("Berhasil diupdate");
-                JOptionPane.showMessageDialog(null, "Data Berhasil diupdate");
+                JOptionPane.showMessageDialog(null, "Data Telah TerUpdate");
              }
              else {
-                 JOptionPane.showMessageDialog(null, "Data Tidak Ada");
+                 JOptionPane.showMessageDialog(null, "Belum Ada Data");
              }
            
         } catch (Exception sql) {
@@ -113,7 +113,7 @@ public class Karyawan {
             String query = "DELETE FROM karyawan WHERE id = '"+cek+"'";
             koneksi.statement = koneksi.koneksi.createStatement();
             koneksi.statement.executeUpdate(query);
-            JOptionPane.showMessageDialog(null, "Berhasil Dihapus");
+            JOptionPane.showMessageDialog(null, "Data Berhasil Dihapus");
             
         }catch(SQLException sql) {
             System.out.println(sql.getMessage());
